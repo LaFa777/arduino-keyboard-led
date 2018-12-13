@@ -112,9 +112,11 @@ int main(int argc, char *argv[])
 
             prevLang = group[0];
         }
+        
+        XFree(group);
+        XkbFreeKeyboard(desc, 0, True);
     }
 
-    XFree(group);
     XCloseDisplay(dpy);
     serialport_close(fd);
 

@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-const int ledPin = 13;
+const int ledPin = 11;
 bool currentKeyboardLayout = true;
 int serialBaudRate = 9600;
 
@@ -13,6 +13,9 @@ void loop() {
   if (Serial.available())
   {
     int currentKeyboardLayout = Serial.read();
-    digitalWrite(ledPin, currentKeyboardLayout);
+    if(currentKeyboardLayout)
+      analogWrite(ledPin, 92);
+    else
+      analogWrite(ledPin, 0);
   }
 }
