@@ -115,6 +115,8 @@ int main(int argc, char *argv[])
         
         XFree(group);
         XkbFreeKeyboard(desc, 0, True);
+
+	usleep (0.05 * 1000 * 1000);
     }
 
     XCloseDisplay(dpy);
