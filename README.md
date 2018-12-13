@@ -13,7 +13,7 @@
 2. Скомпилировать серверную часть командой
 ```
 cd server
-gcc -o keyboard-led main.c arduino-serial/arduino-serial-lib.c -I/usr/include -lX11 -lxkbfile
+gcc -o keyboard-led main.c arduino-serial/arduino-serial-lib.c -I/usr/include -lX11 -lxkbfile -oFast
 ```
 Запустить:
 ```
